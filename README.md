@@ -1,4 +1,5 @@
 # PasswordManager
+[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
 
 A password manager application built with C# (.NET 8).
 
