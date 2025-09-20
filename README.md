@@ -35,6 +35,3 @@ Start the application to add or view your passwords securely.
 
 > Note: Core functionalities (such as saving, loading, and managing passwords) are not yet implemented. The UI structure is in place and ready for further development.
 
-## License
-
-This project is licensed under the MIT License.
