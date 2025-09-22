@@ -28,99 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            menuStrip = new MenuStrip();
             fichierToolStripMenuItem = new ToolStripMenuItem();
-            entréeToolStripMenuItem = new ToolStripMenuItem();
-            nnToolStripMenuItem = new ToolStripMenuItem();
+            MenuNewDatabase = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             closeToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             lockToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            entréeToolStripMenuItem = new ToolStripMenuItem();
             addEntryToolStripMenuItem = new ToolStripMenuItem();
             copyToolStripMenuItem = new ToolStripMenuItem();
             copyPasswordToolStripMenuItem = new ToolStripMenuItem();
             DtgEntries = new DataGridView();
-            menuStrip1.SuspendLayout();
+            menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtgEntries).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem, entréeToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            menuStrip.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem, entréeToolStripMenuItem });
+            menuStrip.Location = new Point(0, 0);
+            menuStrip.Name = "menuStrip";
+            menuStrip.Size = new Size(800, 24);
+            menuStrip.TabIndex = 0;
+            menuStrip.Text = "menuStrip1";
             // 
             // fichierToolStripMenuItem
             // 
-            fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nnToolStripMenuItem, openToolStripMenuItem, closeToolStripMenuItem, saveToolStripMenuItem, lockToolStripMenuItem, exitToolStripMenuItem });
+            fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuNewDatabase, openToolStripMenuItem, closeToolStripMenuItem, saveToolStripMenuItem, lockToolStripMenuItem, exitToolStripMenuItem });
             fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             fichierToolStripMenuItem.Size = new Size(54, 20);
             fichierToolStripMenuItem.Text = "Fichier";
             // 
-            // entréeToolStripMenuItem
+            // MenuNewDatabase
             // 
-            entréeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addEntryToolStripMenuItem, copyToolStripMenuItem, copyPasswordToolStripMenuItem });
-            entréeToolStripMenuItem.Name = "entréeToolStripMenuItem";
-            entréeToolStripMenuItem.Size = new Size(52, 20);
-            entréeToolStripMenuItem.Text = "Entrée";
-            // 
-            // nnToolStripMenuItem
-            // 
-            nnToolStripMenuItem.Name = "nnToolStripMenuItem";
-            nnToolStripMenuItem.Size = new Size(180, 22);
-            nnToolStripMenuItem.Text = "New";
-            nnToolStripMenuItem.Click += this.nnToolStripMenuItem_Click;
+            MenuNewDatabase.Name = "MenuNewDatabase";
+            MenuNewDatabase.ShortcutKeys = Keys.Control | Keys.N;
+            MenuNewDatabase.Size = new Size(180, 22);
+            MenuNewDatabase.Text = "New";
+            MenuNewDatabase.Click += NewDatabase;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
             openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "Open";
             // 
             // closeToolStripMenuItem
             // 
             closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            closeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.W;
             closeToolStripMenuItem.Size = new Size(180, 22);
             closeToolStripMenuItem.Text = "Close";
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
             saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "Save";
             // 
             // lockToolStripMenuItem
             // 
             lockToolStripMenuItem.Name = "lockToolStripMenuItem";
+            lockToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
             lockToolStripMenuItem.Size = new Size(180, 22);
             lockToolStripMenuItem.Text = "Lock";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.U;
             exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
+            // 
+            // entréeToolStripMenuItem
+            // 
+            entréeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addEntryToolStripMenuItem, copyToolStripMenuItem, copyPasswordToolStripMenuItem });
+            entréeToolStripMenuItem.Name = "entréeToolStripMenuItem";
+            entréeToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.I;
+            entréeToolStripMenuItem.Size = new Size(52, 20);
+            entréeToolStripMenuItem.Text = "Entrée";
             // 
             // addEntryToolStripMenuItem
             // 
             addEntryToolStripMenuItem.Name = "addEntryToolStripMenuItem";
-            addEntryToolStripMenuItem.Size = new Size(180, 22);
+            addEntryToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.I;
+            addEntryToolStripMenuItem.Size = new Size(197, 22);
             addEntryToolStripMenuItem.Text = "Add Entry";
             // 
             // copyToolStripMenuItem
             // 
             copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            copyToolStripMenuItem.Size = new Size(180, 22);
+            copyToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.B;
+            copyToolStripMenuItem.Size = new Size(197, 22);
             copyToolStripMenuItem.Text = "Copy User";
             // 
             // copyPasswordToolStripMenuItem
             // 
             copyPasswordToolStripMenuItem.Name = "copyPasswordToolStripMenuItem";
-            copyPasswordToolStripMenuItem.Size = new Size(180, 22);
+            copyPasswordToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.C;
+            copyPasswordToolStripMenuItem.Size = new Size(197, 22);
             copyPasswordToolStripMenuItem.Text = "Copy Password";
             // 
             // DtgEntries
@@ -140,14 +150,14 @@
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(DtgEntries);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(menuStrip);
+            MainMenuStrip = menuStrip;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PasswordManager";
-            Load += Form1_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            Load += MainForm_Load;
+            menuStrip.ResumeLayout(false);
+            menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtgEntries).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -155,10 +165,10 @@
 
         #endregion
 
-        private MenuStrip menuStrip1;
+        private MenuStrip menuStrip;
         private ToolStripMenuItem fichierToolStripMenuItem;
         private ToolStripMenuItem entréeToolStripMenuItem;
-        private ToolStripMenuItem nnToolStripMenuItem;
+        private ToolStripMenuItem MenuNewDatabase;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem closeToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
