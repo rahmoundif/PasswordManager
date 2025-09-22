@@ -33,5 +33,14 @@ Start the application to add or view your passwords securely.
   - Entry: Add Entry, Copy User, Copy Password
 - Main window includes a DataGridView for displaying entries
 
+
+22/09/2025 :
+- Added a `New` menu item that opens a SaveFileDialog to create a new database file and launches `NewDatabaseForm`.
+- Wired keyboard shortcuts for several menu items (New, Open, Close, Save, Lock, Exit, and entry actions).
+- Implemented a `MainForm_Load` event handler stub and removed a duplicate `InitializeComponent` to fix designer conflicts.
+- Created and configured the `DataGridView` (`DtgEntries`) to display password entries.
+- Project scaffold and WinForms UI are prepared for implementing storage and password management logic.
+  
+  
 > Note: Core functionalities (such as saving, loading, and managing passwords) are not yet implemented. The UI structure is in place and ready for further development.
 
